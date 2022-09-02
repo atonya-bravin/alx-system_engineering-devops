@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R -ugod+x
+chmod -R ugo+x $(-type d) 
