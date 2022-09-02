@@ -1,2 +1,2 @@
 #!/bin/bash
-chown school $(pwd)/hello
+chown school /hello
