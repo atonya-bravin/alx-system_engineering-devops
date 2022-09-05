@@ -1,2 +1,2 @@
 #!/bin/bash
-head : $>head -n 3 $(pwc)/iacta | tail -n + 3
+head -n 3 $(pwc)/iacta | tail -n + 3
