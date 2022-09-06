@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f |tail -n 10 | --sort -d 
+find . -type f |tail -n 10 | sort -k6M -k7n
