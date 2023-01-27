@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This bash prints 0 to 12 hours and 1 to 59 minutes of the 12 hours
+
+hour_counter=0
+minute_counter=1
+
+while [ $hour_counter -lt 13 ]
+do
+	echo "Hour $hour_counter"
+	while [ $minute_counter -lt 60 ]
+	do
+		echo $minute_counter
+		minute_counter=$(( minute_counter+1 ))
+	done
+	minute_counter=1
+	hour_counter=$(( hour_counter+1 ))
+done
