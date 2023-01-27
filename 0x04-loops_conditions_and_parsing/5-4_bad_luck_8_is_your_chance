@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This bash prints Best school 10 times but with different output on 4th and 8th iterations
+
+counter=0
+
+while [ $counter -lt 10 ]
+do
+if [ $counter -eq 3 ]
+then
+echo "Best School"
+echo "bad luck"
+elif [ $counter -eq 7 ]
+then
+echo "Best School"
+echo "good luck"
+else
+echo "Best School"
+fi
+counter=$(( counter+1 ))
+done
