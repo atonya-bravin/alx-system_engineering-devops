@@ -5,11 +5,12 @@ counter=0
 
 while [ $counter -lt 10 ]
 do
-if [ $counter -eq 9 ]
+if [ $counter -eq 8 ]
 then
 echo "Best School"
 echo "Hi"
-fi
+else
 echo "Best School"
+fi
 counter=$(( counter+1 ))
 done
