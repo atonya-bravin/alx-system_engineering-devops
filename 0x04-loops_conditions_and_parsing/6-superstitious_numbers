@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# prints numbers 1 to 20 but for 4, 9, 17
+
+counter=0
+
+while [ $counter -lt 20 ]
+do
+echo $(( counter+1 ))
+case $counter in
+3)
+echo "bad luck from China";;
+8)
+echo "bad luck from Japan";;
+16)
+echo "bad luck from Italy"i;;
+esac
+counter=$(( counter+1 ))
+done
