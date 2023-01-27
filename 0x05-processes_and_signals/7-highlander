@@ -3,7 +3,7 @@
 
 trap 'echo "I am invincible!!!" ' TERM
 
-while true
+while :
 do
 echo "To infinity and beyond"
 sleep 2
