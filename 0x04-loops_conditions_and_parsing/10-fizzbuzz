@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This bash file prints 1-100 with fizzBuzz
 
-counter=0
+counter=1
 while [ $counter -le "100" ]
 do
 	if ((counter % 3 == 0 && counter % 5 == 0))
