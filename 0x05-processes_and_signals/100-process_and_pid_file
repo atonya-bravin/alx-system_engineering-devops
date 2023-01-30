@@ -15,8 +15,8 @@ done
 
 function SIGTERM_signal()
 {
-	echo "Ihate the kill command"
-	rm -rf /var/run/myscript.pid
+	echo "I hate the kill command"
+	rm -f /var/run/myscript.pid
 	kill -9 $process_PID
 }
 
@@ -26,7 +26,7 @@ function SIGINT_signal()
 }
 function SIGQUIT_signal()
 {
-	rm -rf /var/run/myscript.pid
+	rm -f /var/run/myscript.pid
 	kill -9 $process_PID
 }
 
