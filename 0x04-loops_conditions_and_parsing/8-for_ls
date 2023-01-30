@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#prints all the contents of a directory without the first dash
+
+directory_content=$("ls")
+
+for file in $directory_content
+do
+	echo $file | cut -d '-' -f2
+done

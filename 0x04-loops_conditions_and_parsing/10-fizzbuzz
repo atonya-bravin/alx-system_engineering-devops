@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# This bash file prints 1-100 with fizzBuzz
+
+for counter in {1..100}
+do
+	if [ $counter -eq 3 ]
+	echo "Fizz"
+	fi
+done
