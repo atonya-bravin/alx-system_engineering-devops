@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # This bash file prints 1-100 with fizzBuzz
 
 counter=0
