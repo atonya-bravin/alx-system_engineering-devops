@@ -1,0 +1,3 @@
+#!/usr/bin/env
+# start the apache service ---> it may have stoped
+service apache2 start
