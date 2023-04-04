@@ -9,7 +9,7 @@ apt update
 apt install -y nginx
 ufw allow 'Nginx HTTP'
 sudo chmod 777 /var/www/html/index.html
-sudo echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 sudo chmod 644 /var/www/html/index.html
 sudo sed -i "s|server_name\ _;|$new_configuration|" /etc/nginx/sites-available/default
 sudo service nginx restart
