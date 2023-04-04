@@ -1,4 +1,4 @@
-#!/bin/bash/env bash
+#!/usr/bin/env bash
 # This bash file installs nginx then configures its index page to display Hello World
 
 apt update
