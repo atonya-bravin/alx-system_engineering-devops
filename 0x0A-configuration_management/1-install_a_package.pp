@@ -8,7 +8,7 @@ exec { 'install flask':
   command => '/usr/bin/pip install flask -v 2.1.0'
 }
 
-package { 'pip3':
+package { 'pip':
   ensure => 'installed',
   before => Exec['install pip']
 }
