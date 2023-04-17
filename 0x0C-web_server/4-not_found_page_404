@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This bash file installs nginx then configures its index page to display Hello World
+# It also configures bad links to error 404 file "404.html"
+
+link="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+new_configuration="server_name _;\n\trewrite ^/redirect_me/$ $link permanent;"
+location_error="location = /404.html {\n\t\troot /var/www/html/;\n\t\tinternal;\n"
+error_directive="error_page 404 /404.html;\n\t$location_error"
+error_404="}\n\n\t$error_directive\t}"
+
+sudo apt update
+sudo apt install -y nginx
+sudo ufw allow 'Nginx HTTP'
+sudo touch /var/www/html/404.html
+sudo chmod 777 /var/www/html/index.nginx-debian.html /var/www/html/404.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo chmod 644 /var/www/html/index.nginx-debian.html /var/www/html/404.html
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/bravinatonya-alx.tech /etc/nginx/sites-enabled/bravinatonya-alx.tech
+sudo sed -i "s|server_name\ _;|$new_configuration|" /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo sed -i "0,/}/ s|}|$error_404|" /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo service nginx restart
