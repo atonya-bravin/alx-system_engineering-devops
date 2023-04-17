@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# This bash file installs nginx then configures its index page to display Hello World
+# It also configures redirection to permanent links
+
+link="https://www.youtube.com/watch?v=QH2-TGUlwu4"
+new_configuration="server_name _;\n\trewrite ^/redirect_me/$ $link permanent;"
+location_error="location = /404.html {\n\t\troot /var/www/html/;\n\t\tinternal;\n"
+error_directive="error_page 404 /404.html;\n\t$location_error"
+error_404="}\n\n\t$error_directive\t}"
+
+sudo apt update
+sudo apt install -y nginx
+sudo ufw allow 'Nginx HTTP'
+sudo touch /var/www/html/404.html
+sudo chmod 777 /var/www/html/index.nginx-debian.html /var/www/html/404.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo chmod 644 /var/www/html/index.nginx-debian.html /var/www/html/404.html
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/bravinatonya-alx.tech /etc/nginx/sites-enabled/bravinatonya-alx.tech
+sudo sed -i "s|server_name\ _;|$new_configuration|" /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo sed -i "0,/}/ s|}|$error_404|" /etc/nginx/sites-available/bravinatonya-alx.tech
+sudo service nginx restart
+
+configuration_file="/etc/nginx/nginx.conf"
+
+if ! sudo grep -q "add_header X-Served-By" $configuration_file;
+then
+        # shellcheck disable=SC2154
+        header_key="X-Served-By"
+        header_value="\$hostname"
+        header="add_header $header_key $header_value;"
+        search="http {"
+        new_conf="$search\n\t$header"
+
+        # Replace the value found with the new configuration
+        sudo sed -i "s|$search|$new_conf|" $configuration_file
+
+        # Restart Nginx Service
+        sudo service nginx restart
+fi
