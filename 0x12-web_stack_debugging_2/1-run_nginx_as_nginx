@@ -3,8 +3,14 @@
 
 pkill apache2
 
-if grep -q "80" /etc/nginx/sites-available/default ; then
-	sed -i "s/80/8080" /etc/nginx/sites-available/default
+# change IPV4 listening port if it is 80 to 8080
+if grep -q "listen 80" /etc/nginx/sites-available/default ; then
+    sed -i "s/listen 80/listen 8080/" /etc/nginx/sites-available/default
+fi
+
+# change IPV6 listening port if it is 80 to 8080
+if grep -q "listen \[::\]:80" /etc/nginx/sites-available/default ; then
+    sed -i "s/listen \[::\]:80/listen \[::\]:8080/" /etc/nginx/sites-available/default
 fi
 
 chown nginx:nginx /etc/nginx/nginx.conf
