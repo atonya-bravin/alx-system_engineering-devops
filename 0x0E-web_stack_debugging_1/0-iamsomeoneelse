@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Set a shell path of the desired user to the value returned by the "which bash" command
+# Switches to the user
+# and execute the "whoami" command
+#
+
+user="$1"
+
+if [ "$user" ] ; then
+    chsh -s "$(which bash)" "$user" && su "$user" -c "whoami"
+fi
