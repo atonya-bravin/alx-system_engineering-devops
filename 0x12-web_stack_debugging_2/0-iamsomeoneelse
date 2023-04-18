@@ -1,0 +1,4 @@
+sudo adduser --disabled-password --gecos GECOS www-data
+sudo su - www-data
+whoami
+sudo -i
