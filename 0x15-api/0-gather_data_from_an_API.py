@@ -6,7 +6,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    """ get the user id from the shell"""
+    """get the user id from the shell"""
     user_id = argv[1]
 
     """ user route """
