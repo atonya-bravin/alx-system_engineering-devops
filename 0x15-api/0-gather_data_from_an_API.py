@@ -7,12 +7,12 @@ from sys import argv
 
 if __name__ == '__main__':
     try:
-        employee_id = int(argv[1])
+        emp_id = int(argv[1])
     except ValueError:
         exit()
 
     api_url = 'https://jsonplaceholder.typicode.com'
-    user_uri = '{api}/users/{id}'.format(api=api_url, id=employee_id)
+    user_uri = '{api}/users/{id}'.format(api=api_url, id=emp_id)
     todo_uri = '{user_uri}/todos'.format(user_uri=user_uri)
 
     # User Response
@@ -34,8 +34,8 @@ if __name__ == '__main__':
     completed = total - non_completed
 
     # Formatting the expected output
-    str = "Employee {name} is done with tasks({completed}/{total}):"
-    print(str.format(name=name, completed=completed, total=total))
+    str = "Employee {emp_name} is done with tasks({completed}/{total}):"
+    print(str.format(emp_name=name, completed=completed, total=total))
 
     # Printing completed tasks
     for elem in res:
