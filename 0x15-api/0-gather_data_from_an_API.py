@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     # Number of completed tasks
     completed = total - not_completed
-    
+
     # Formatting the expected output
     str = "Employee {emp_name} is done with tasks({completed}/{total}):"
     print(str.format(emp_name=name, completed=completed, total=total))
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     # Printing completed tasks
     for elem in res:
         if elem.get('completed') is True:
-        print('\t', elem.get('title'))
+            print('\t', elem.get('title'))
