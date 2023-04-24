@@ -19,7 +19,7 @@ if __name__ == '__main__':
     res = requests.get(user_uri).json()
 
     # Name of the employee in question
-    name = res.json()["name"]
+    name = res('name')
 
     # User TODO_LIST Response
     res = requests.get(todo_uri).json()
