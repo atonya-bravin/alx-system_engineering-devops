@@ -12,7 +12,7 @@ if __name__ == '__main__':
         exit()
 
     api_url = 'https://jsonplaceholder.typicode.com'
-    user_uri = '{api}/users/{id}'.format(api=api_url, id=emp_id)
+    user_uri = '{api}/users/{user_id}'.format(api=api_url, user_id=emp_id)
     todo_uri = '{user_uri}/todos'.format(user_uri=user_uri)
 
     # User Response
