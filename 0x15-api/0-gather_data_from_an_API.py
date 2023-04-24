@@ -34,7 +34,7 @@ if __name__ == "__main__":
                 number_completed += 1
                 completed_titles.append(item.get("title"))
     print("Employee {} is done with tasks({}/{}):".format(
-        user_name, number_completed, total_todo)
+        user_name, number_completed, total_todo))
 
     """printing completed tasks"""
     for title in completed_titles:
