@@ -21,7 +21,7 @@ if __name__ == '__main__':
     # Name of the employee in question
     employee_name = res.get('name')
 
-    # User TODO Response
+    # User TODO_LIST Response
     res = requests.get(todo_uri).json()
 
     # Total number of tasks ==> both completed and non-completed tasks
