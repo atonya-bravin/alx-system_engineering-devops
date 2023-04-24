@@ -25,7 +25,7 @@ if __name__ == '__main__':
     res = requests.get(todo_uri).json()
 
     # Total number of tasks ==> both completed and non-completed tasks
-    total = len(res.json())
+    total = len(res)
 
     # Number of non-completed tasks
     non_completed = sum([elem['completed'] is False for elem in res])
