@@ -19,13 +19,13 @@ if __name__ == '__main__':
     res = requests.get(user_uri).json()
 
     # Name of the employee in question
-    name = res.get('name')
+    name = res.json()["name"]
 
     # User TODO_LIST Response
     res = requests.get(todo_uri).json()
 
     # Total number of tasks ==> both completed and non-completed tasks
-    total = len(res)
+    total = len(res.json())
 
     # Number of non-completed tasks
     non_completed = sum([elem['completed'] is False for elem in res])
