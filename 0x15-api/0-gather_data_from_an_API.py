@@ -7,20 +7,16 @@ from sys import argv
 if __name__ == "__main__":
 
     """get the user id from the shell"""
-    employee_id = argv[1]
-
-    """ user route """
-    user_uri = "https://jsonplaceholder.typicode.com/users/{employee_id}"
+    emp_id = argv[1]
     
-    """ todo route """
-    todo_uri = "https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
+    API_domain = "jsonplaceholder.typicode.com"
 
-    response = requests.get(user_uri)
+    response = requests.get(f"https://{API_domain}/users/{emp_id}")
 
     """ get name from dict """
     employee_name = response.json()["name"]
 
-    response = requests.get(todo_uri)
+    response = requests.get(f"https://{API_domain}/users/{emp_id}/todos")
 
     total_number_of_tasks = len(response.json())
     number_of_done_tasks = 0
