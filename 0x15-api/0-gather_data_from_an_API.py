@@ -10,14 +10,15 @@ if __name__ == "__main__":
     employee_id = argv[1]
 
     """ user route """
-    response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
+    response = requests.get(f"https://jsonplaceholder.typicode.com/
+        users/{employee_id}")
 
     """ get name from dict """
     employee_name = response.json()["name"]
 
     """ todo route """
-    response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos")
-
+    response = requests.get(f"https://jsonplaceholder.typicode.com/
+        users/{employee_id}/todos")
 
     total_number_of_tasks = len(response.json())
     number_of_done_tasks = 0
