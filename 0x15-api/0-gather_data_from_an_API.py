@@ -31,4 +31,4 @@ if __name__ == "__main__":
 
     for todo in response.json():
         if todo["completed"]:
-            print("\t", todo["title"])
+            print("\t ", todo["title"])
