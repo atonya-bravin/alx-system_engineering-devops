@@ -7,35 +7,28 @@ from sys import argv
 if __name__ == "__main__":
 
     """get the user id from the shell"""
-    user_id = argv[1]
+    employee_id = sys.argv[1]
 
     """ user route """
-    user_url = "https://jsonplaceholder.typicode.com/users/" + user_id
-
-    """ user dictionary from user route """
-    user_dict = requests.get(user_url).json()
+    response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
 
     """ get name from dict """
-    user_name = user_dict.get("name")
+    employee_name = response.json()["name"]
 
     """ todo route """
-    user_todo = requests.get("https://jsonplaceholder.typicode.com/todos")
+    response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos")
 
-    """ user dictionaty from todo route """
-    user_todo = user_todo.json()
-    total_todo = 0
-    completed_titles = []
-    number_completed = 0
 
-    for item in user_todo:
-        if item.get("userId") == int(user_id):
-            total_todo += 1
-            if item.get("completed") is True:
-                number_completed += 1
-                completed_titles.append(item.get("title"))
-    print("Employee {} is done with tasks({}/{}):".format(
-        user_name, number_completed, total_todo))
+    total_number_of_tasks = len(response.json())
+    number_of_done_tasks = 0
 
-    """printing completed tasks"""
-    for title in completed_titles:
-        print("\t {}".format(title))
+    print(f"Employee {employee_name} is done with tasks(", end="")
+    for todo in response.json():
+        if todo["completed"]:
+            number_of_done_tasks += 1
+
+    print(f"{number_of_done_tasks}/{total_number_of_tasks}):")
+
+    for todo in response.json():
+        if todo["completed"]:
+    print("\t ", todo["title"])
