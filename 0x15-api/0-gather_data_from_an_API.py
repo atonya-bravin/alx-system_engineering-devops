@@ -10,8 +10,8 @@ if __name__ == "__main__":
     employee_id = argv[1]
 
     """ user route """
-    response = requests.get(f"https://jsonplaceholder.typicode.com/
-        users/{employee_id}")
+    response = requests.get(f
+        "https://jsonplaceholder.typicode.com/users/{employee_id}")
 
     """ get name from dict """
     employee_name = response.json()["name"]
