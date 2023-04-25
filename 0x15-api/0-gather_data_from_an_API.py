@@ -5,17 +5,15 @@ about his/her TODO list progress.
 import requests
 from sys import argv
 
-"""only execute when called from the main program"""
 if __name__ == "__main__":
 
-    """get the user id from the shell"""
+    
     emp_id = argv[1]
 
     API_domain = "jsonplaceholder.typicode.com"
 
     response = requests.get(f"https://{API_domain}/users/{emp_id}")
 
-    """ get name from dict """
     employee_name = response.json()["name"]
 
     response = requests.get(f"https://{API_domain}/users/{emp_id}/todos")
