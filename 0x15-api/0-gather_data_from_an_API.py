@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-fetching json data from an api
+"""Given an Employee ID, returns information
+about his/her TODO list progress.
 """
 
 import requests
