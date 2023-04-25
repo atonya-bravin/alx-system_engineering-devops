@@ -8,7 +8,7 @@ if __name__ == "__main__":
 
     """get the user id from the shell"""
     emp_id = argv[1]
-    
+
     API_domain = "jsonplaceholder.typicode.com"
 
     response = requests.get(f"https://{API_domain}/users/{emp_id}")
