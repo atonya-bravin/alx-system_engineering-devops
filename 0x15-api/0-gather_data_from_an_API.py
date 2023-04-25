@@ -3,7 +3,6 @@
 fetching json data from an api
 """
 
-
 import requests
 from sys import argv
 
