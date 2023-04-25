@@ -7,7 +7,7 @@ from sys import argv
 if __name__ == "__main__":
 
     """get the user id from the shell"""
-    employee_id = sys.argv[1]
+    employee_id = argv[1]
 
     """ user route """
     response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
