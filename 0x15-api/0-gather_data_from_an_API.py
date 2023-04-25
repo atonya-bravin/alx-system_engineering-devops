@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" fetching json data from an api """
+"""fetching json data from an api"""
 
 import requests
 from sys import argv
 
+"""only execute when called from the main program"""
 if __name__ == "__main__":
 
     """get the user id from the shell"""
