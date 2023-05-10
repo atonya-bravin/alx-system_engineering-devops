@@ -2,6 +2,8 @@
 # Script that configures HAproxy
 
 sudo apt install haproxy
+sudo chmod u+x 777
 echo 'frontend myfrontend\n\tbind *:80\ndefault_backend myservers\n\n
 backend myservers\n\tbalance roundrobin\n\t\tserver server1 52.91.149.35:80 check\n\t\tserver server2 34.232.67.76:80 check\n' >> /etc/haproxy/haproxy.cfg
-
+sudo chmod u+x 644
+sudo systemctl restart haproxy
