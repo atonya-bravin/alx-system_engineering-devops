@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # Script that configures HAproxy
 
+
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
 sudo apt update
+
+sudo apt install -y haproxy=1.8.\*
 
 
 haproxy_conf_file="/etc/haproxy/haproxy.cfg"
-
-sudo rm -rf $haproxy_conf_file
-sudo apt install -y haproxy
 frontend_name="frontend http"
 frontend_bind="bind *:80"
 frontend_mode="mode http"
