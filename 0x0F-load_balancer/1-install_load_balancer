@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
 # Script that configures HAproxy
 
-sudo apt update
+sudo apt-get update
 
-sudo apt install haproxy
-
+sudo apt-get install -y haproxy
 
 haproxy_conf_file="/etc/haproxy/haproxy.cfg"
 frontend_name="frontend http"
 frontend_bind="bind *:80"
-frontend_mode="mode http"
 frontend_default="default_backend myservers"
-frontend="$frontend_name\n\t$frontend_bind\n\t$frontend_mode\n\t$frontend_default\n"
+frontend="$frontend_name\n\t$frontend_bind\n\t$frontend_default\n"
 
 backend_name="backend myservers"
 balance_type="balance roundrobin"
