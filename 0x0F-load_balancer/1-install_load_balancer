@@ -13,8 +13,8 @@ frontend myfrontend
 
 backend myservers
 	balance roundrobin
-	server 126259-web-02 34.232.67.76:80 check
-	server 126259-web-02 34.232.67.76:80 check
+	server 126259-web-01 52.91.149.35 check
+	server 126259-web-02 34.232.67.76 check
 EOT
 sudo /etc/init.d/haproxy reload
 # proxy_conf_file="/etc/haproxy/haproxy.cfg"
