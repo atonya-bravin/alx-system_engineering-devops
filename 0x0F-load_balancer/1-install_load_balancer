@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 # Script that configures HAproxy
 
+sudo apt update
+
+
 haproxy_conf_file="/etc/haproxy/haproxy.cfg"
 
+sudo rm -rf $haproxy_conf_file
 sudo apt install haproxy
 frontend_name="frontend http"
 frontend_bind="bind *:80"
