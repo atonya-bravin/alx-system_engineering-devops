@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 # Script that configures HAproxy
 
-
-sudo apt install -y software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-1.8 -y
 sudo apt update
 
-sudo apt install -y haproxy=1.8.\*
+sudo apt install haproxy
 
 
 haproxy_conf_file="/etc/haproxy/haproxy.cfg"
