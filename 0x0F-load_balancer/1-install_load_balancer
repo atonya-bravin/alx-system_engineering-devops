@@ -13,8 +13,8 @@ frontend="$frontend_name\n\t$frontend_bind\n\t$frontend_default\n"
 
 backend_name="backend myservers"
 balance_type="balance roundrobin"
-server1="server server1 52.91.149.35:80 check"
-server2="server server2 34.232.67.76:80 check"
+server1="server 126259-web-01 52.91.149.35:80 check"
+server2="server 126259-web-02 34.232.67.76:80 check"
 backend="$backend_name\n\t$balance_type\n\t$server1\n\t$server2"
 
 sudo sed -i "$ a $frontend" $haproxy_conf_file
