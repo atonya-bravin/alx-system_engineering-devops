@@ -1,15 +1,22 @@
 #!/usr/bin/env bash
 # Script that configures HAproxy
 
-sudo apt install haproxy
-sudo chmod 777 /etc/haproxy/haproxy.cfg
-echo 'frontend myfrontend
-        bind *:80
-	default_backend myservers
+haproxy_conf_file="/etc/haproxy/haproxy.cfg"
 
-backend myservers
-	balance roundrobin
-		server server1 52.91.149.35:80 check
-		server server2 34.232.67.76:80 check' >> /etc/haproxy/haproxy.cfg
-sudo chmod 644 /etc/haproxy/haproxy.cfg
+sudo apt install haproxy
+frontend_name="frontend http"
+frontend_bind="bind *:80"
+frontend_mode="mode http"
+frontend_default="default_backend web-backend"
+frontend="$frontend_name\n\t$frontend_bind\n\t$frontend_mode\n\t$frontend_default\n"
+
+backend_name="backend myservers"
+balance_type="balance roundrobin"
+server1="server server1 52.91.149.35:80 check"
+server2="server server2 34.232.67.76:80 check"
+backend="$backend_name\n\t$balance_type\n\t$server1\n\t$server2"
+
+sudo sed -i "$ a $frontend" $haproxy_conf_file
+sudo sed -i "$ a $backend" $haproxy_conf_file
+
 sudo systemctl restart haproxy
