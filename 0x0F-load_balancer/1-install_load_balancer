@@ -13,7 +13,7 @@ haproxy_conf_file="/etc/haproxy/haproxy.cfg"
 frontend_name="frontend http"
 frontend_bind="bind *:80"
 frontend_mode="mode http"
-frontend_default="default_backend web-backend"
+frontend_default="default_backend myservers"
 frontend="$frontend_name\n\t$frontend_bind\n\t$frontend_mode\n\t$frontend_default\n"
 
 backend_name="backend myservers"
