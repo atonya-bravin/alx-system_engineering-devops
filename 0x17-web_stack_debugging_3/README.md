@@ -27,15 +27,15 @@ Strace is one of the most powerful process monitoring, diagnostic, instructional
 ## Special commands
 ### tmux
 **Note:**=>Thus `C-b` simply means press the `Ctrl` and **b** keys at the same time  .
-Sppliting panes ==> `C-b %`  
-Navigating panes ==> `C-b <arrow key>`  
-Closing Panes ==> `exit` or `Ctrl-d`  
-Creating Window ==> `C-b c`  
-Switching to Previous window ==> `C-b p`  
-Switching to next window ==> `C-b n`  
-Detaching current session ==> `C-b d`  
-List current working sessions ==> `tmux ls`  
-Connecting to a session ==> `tmux attach -t <session number>`  
+1. Sppliting panes ==> `C-b %`  
+2. Navigating panes ==> `C-b <arrow key>`  
+3. Closing Panes ==> `exit` or `Ctrl-d`  
+4. Creating Window ==> `C-b c`  
+5. Switching to Previous window ==> `C-b p`  
+6. Switching to next window ==> `C-b n`  
+7. Detaching current session ==> `C-b d`  
+8. List current working sessions ==> `tmux ls`  
+9. Connecting to a session ==> `tmux attach -t <session number>`  
 **More** [tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)  
 
 ### strace
@@ -43,7 +43,7 @@ Connecting to a session ==> `tmux attach -t <session number>`
 2. Check if port 80 is Listenning ==> `ss -tuna | grep 80`  
 3. Check for Apache process PID ==> `lsof -i:80`  
 4. Mornitor the Apache process using its PID ==> `strace -p <appache_process_PID>`  
-**More** [strace](https://medium.com/@donjoedbest/how-i-resolved-an-http-500-error-with-tmux-and-strace-d429d46ebc79)  
+**More** [strace](https://medium.com/@donjoedbest/how-i-resolved-an-http-500-error-with-tmux-and-strace-d429d46ebc79)
 
 ## Featured Files
 1. **0-strace_is_your_friend.pp** ==> Contains Puppet code to solve errors found while useing **strace**
