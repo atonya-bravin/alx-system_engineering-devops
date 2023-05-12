@@ -35,14 +35,14 @@ Strace is one of the most powerful process monitoring, diagnostic, instructional
 6. Switching to next window ==> `C-b n`  
 7. Detaching current session ==> `C-b d`  
 8. List current working sessions ==> `tmux ls`  
-9. Connecting to a session ==> `tmux attach -t <session number>`
+9. Connecting to a session ==> `tmux attach -t <session number>`  
 **More** [tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)  
 
 ### strace
 1. Apache status check ==> `service apache2 status`  
 2. Check if port 80 is Listenning ==> `ss -tuna | grep 80`  
 3. Check for Apache process PID ==> `lsof -i:80`  
-4. Mornitor the Apache process using its PID ==> `strace -p <appache_process_PID>`
+4. Mornitor the Apache process using its PID ==> `strace -p <appache_process_PID>`  
 **More** [strace](https://medium.com/@donjoedbest/how-i-resolved-an-http-500-error-with-tmux-and-strace-d429d46ebc79)
 
 ## Featured Files
