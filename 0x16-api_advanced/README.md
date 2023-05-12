@@ -9,7 +9,7 @@ This project is basically aimed at impacting the skills of;
 5. How to sort a dictionary by value
 
 ## Requirements
-* reddit API
+* Reddit API
 * Pyhton 3
 * Vi
 
