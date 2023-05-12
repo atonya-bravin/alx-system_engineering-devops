@@ -15,7 +15,8 @@ This project is basically aimed at impacting the skills of;
 
 ## Featured Files
 1. **0-subs.py** ==> this file contains a function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit. If an invalid subreddit is given, the function should return 0.
-2. **1-top_****ten.py** ==> this file contains a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+2. **1-top_ten.py** ==> this file contains a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+3. **2-recurse.py** ==> this file contains a recursive function that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit.
 
 ## Summary
 A great API to use for some practice is the Reddit API. There’s a lot of endpoints available, many that don’t require any form of authentication, and there’s tons of information to be parsed out and presented. This project therefore brings into play the Reddit API.
