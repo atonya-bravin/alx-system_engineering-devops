@@ -6,6 +6,8 @@ This project aims at impacting the skill of debuging of LAMP stacks.
 ## Requirements
 1. strace ==> `sudo apt-get install strace`
 2. tmux ==> `sudo apt-get install tmux`
+3. Ruby ==> `apt-get install -y ruby`
+4. Puppet-lint ==> `gem install puppet-lint -v 2.1.1`
 
 #### tmux
 tmux’s authors describe it as a terminal multiplexer. Behind this fancy term hides a simple concept: Within one terminal window you can open multiple windows and split-views (called “panes” in tmux lingo). Each pane will contain its own, independently running shell instance (bash, zsh, whatever you’re using). This allows you to have multiple terminal commands and applications running side by side without the need to open multiple terminal emulator windows.
@@ -26,7 +28,7 @@ Strace is one of the most powerful process monitoring, diagnostic, instructional
 
 ## Special commands
 ### tmux
-**Note:**=>Thus `C-b` simply means press the `Ctrl` and **b** keys at the same time  .
+**Note:**==>Thus `C-b` simply means press the `Ctrl` and **b** keys at the same time  .
 1. Sppliting panes ==> `C-b %`  
 2. Navigating panes ==> `C-b <arrow key>`  
 3. Closing Panes ==> `exit` or `Ctrl-d`  
