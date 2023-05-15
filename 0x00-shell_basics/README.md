@@ -76,18 +76,18 @@ This project is aimed at revealing more on;
 		* **Move a directory** ==> `mv directory1 /home/user/documents/`
 **Character Class** ==> In Linux and other Unix-like systems, a character class is a set of characters that can be used to match a single character in a pattern. Character classes are used in various commands and utilities that work with patterns, such as regular expressions and file globbing.  
 **Some of the main Character classes include;**
-	* `[:alnum:]` - matches any alphanumeric character
-	* `[:alpha:]` - matches any alphabetic character
-	* `[:blank:]` - matches any horizontal whitespace character, including space and tab
-	* `[:cntrl:]` - matches any control character
-	* `[:digit:]` - matches any digit (0-9)
-	* `[:graph:]` - matches any printable character except space
-	* `[:lower:]` - matches any lowercase letter
-	* `[:print:]` - matches any printable character, including space
-	* `[:punct:]` - matches any punctuation character
-	* `[:space:]` - matches any whitespace character, including space, tab, and newline
-	* `[:upper:]` - matches any uppercase letter
-	* `[:xdigit:]` - matches any hexadecimal digit (0-9, A-F, a-f)  
+		* `[:alnum:]` - matches any alphanumeric character
+		* `[:alpha:]` - matches any alphabetic character
+		* `[:blank:]` - matches any horizontal whitespace character, including space and tab
+		* `[:cntrl:]` - matches any control character
+		* `[:digit:]` - matches any digit (0-9)
+		* `[:graph:]` - matches any printable character except space
+		* `[:lower:]` - matches any lowercase letter
+		* `[:print:]` - matches any printable character, including space
+		* `[:punct:]` - matches any punctuation character
+		* `[:space:]` - matches any whitespace character, including space, tab, and newline
+		* `[:upper:]` - matches any uppercase letter
+		* `[:xdigit:]` - matches any hexadecimal digit (0-9, A-F, a-f)  
 **Solution brokedown**  
 `mv [[:upper:]]* /tmp/u`  
 -> `mv`: This is the command for "move".  
