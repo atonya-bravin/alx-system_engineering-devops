@@ -51,7 +51,21 @@ This project is aimed at revealing more on;
 		This will create a **hard link** called **link1** to the file **file1**. If you modify either **file1** or **link1**, the changes will be reflected in both files because they point to the same data on the disk.
 		* `ln -s file1 link1`
 		This will create a **symbolic link** called **link1** to the file **file1**. If you modify **file1**, the changes will be reflected in **link1**. However, if you modify **link1**, the changes will not affect **file1**.
-
+15. **14-copy_html** ==> Contians a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.  
+**Take Away(T.A)**
+	* **cp**In Linux, the cp command is used to copy files or directories from one location to another. The basic syntax for the cp command is as follows: `cp [OPTIONS] <SOURCE> <DESTINATION>`
+	**Examples**
+		* `cp file1 folder1/`
+		Copies a file named **file1** from the current directory to a directory called **folder1**
+	**Commonly used options**
+	* `-i` (interactive) ==> prompts before overwriting existing files
+	* `-r` (recursive): copies directories and their contents recursively
+	* `-p` (preserve): preserves file attributes such as permissions, timestamps, and ownership
+	* `-a` (archive): preserves file attributes and copies recursively, equivalent to -p -r
+	* `-f` (force): forces overwrite of existing files without prompting
+	* `-u` (update): copies only when the source file is newer than the destination file, or the destination file does not exist
+	* `-v` (verbose): prints the name of each file as it is copied
+	* `-n` (no-clobber): does not overwrite existing files, equivalent to -i -n
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
