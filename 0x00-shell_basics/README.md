@@ -87,12 +87,11 @@ This project is aimed at revealing more on;
 * `[:punct:]` - matches any punctuation character
 * `[:space:]` - matches any whitespace character, including space, tab, and newline
 * `[:upper:]` - matches any uppercase letter
-* `[:xdigit:]` - matches any hexadecimal digit (0-9, A-F, a-f)
-**Solution brokedown**
-`mv [[:upper:]]* /tmp/u`
--> `mv`: This is the command for "move".
--> `[[:upper:]]*`: This is a pattern that matches any file or directory name starting with an uppercase letter. The square brackets **[ ]** indicate a character class, and **[:upper:]** is a predefined character class that matches uppercase letters. The** * **matches zero or more of any character after the uppercase letter.
-`/tmp/u:` This is the destination directory where the files and directories matching the pattern will be moved to. In this case, the destination directory is `/tmp/u`.
+* `[:xdigit:]` - matches any hexadecimal digit (0-9, A-F, a-f)  
+**Solution brokedown**  
+`mv [[:upper:]]* /tmp/u`  
+-> `mv`: This is the command for "move".  
+-> `[[:upper:]]*`: This is a pattern that matches any file or directory name starting with an uppercase letter. The square brackets **[ ]** indicate a character class, and **[:upper:]** is a predefined character class that matches uppercase letters. The** * **matches zero or more of any character after the uppercase letter.`/tmp/u:` This is the destination directory where the files and directories matching the pattern will be moved to. In this case, the destination directory is `/tmp/u`.
 
 
 ## Summary
