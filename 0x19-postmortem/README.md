@@ -1,4 +1,4 @@
-[<img src="https://dribbble.com/shots/21462458-Lamp-stack?added_first_shot=true" width="200" />]
+![image](https://cdn.dribbble.com/userupload/7004640/file/original-757a5b8447a08c20a027358befd04052.jpg?compress=1&resize=752x)
 # LAMP stack infrastructure outage incident report
 
 **Done by: Bravin Atonya** [Github](https://github.com/atonya-bravin)
