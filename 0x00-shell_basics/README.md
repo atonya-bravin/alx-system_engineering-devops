@@ -43,6 +43,15 @@ This project is aimed at revealing more on;
 13. **12-file_type** ==> contains a script that prints the type of the file named `iamafile`, which is in the `/tmp`.  
 **Take Away(T.A)**
 	* **file** ==> In Linux, the file command is a command-line utility that is used to determine the type of a file. It examines the contents of a file and tries to identify what kind of data it contains.
+14. **13-symbolic_link** ==> Contains a script that creates a symbolic link to `/bin/ls`, named `__ls__`. The symbolic link created the current working directory.  
+**Take Away(T.A)**
+	* **ln** ==> In Linux, the ln command is used to create links between files. It can create either hard links or symbolic links. The syntax for the `ln` command is as follows: `ln [OPTIONS] <SOURCE> <DESTINATION>`.  
+	**Examples**  
+		* `ln -i file1 link1`
+		This will create a **hard link** called **link1** to the file **file1**. If you modify either **file1** or **link1**, the changes will be reflected in both files because they point to the same data on the disk.
+		* `ln -s file1 link1`
+		This will create a **symbolic link** called **link1** to the file **file1**. If you modify **file1**, the changes will be reflected in **link1**. However, if you modify **link1**, the changes will not affect **file1**.
+
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
