@@ -56,7 +56,7 @@ This project is aimed at revealing more on;
 	* **cp**In Linux, the cp command is used to copy files or directories from one location to another. The basic syntax for the cp command is as follows: `cp [OPTIONS] <SOURCE> <DESTINATION>`
 	**Examples**
 		* `cp file1 folder1/`
-		Copies a file named **file1** from the current directory to a directory called **folder1**
+		Copies a file named **file1** from the current directory to a directory called **folder1**  
 	**Commonly used options**
 	* `-i` (interactive) ==> prompts before overwriting existing files
 	* `-r` (recursive): copies directories and their contents recursively
