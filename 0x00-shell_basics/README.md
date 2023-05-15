@@ -36,7 +36,11 @@ This project is aimed at revealing more on;
 9. **8-firstdelete** ==> Contains a script that deletes the file `betty`.
 10. **9-firstdirdeletion** ==> Contains a script that deletes the directory `my_first_directory` that is in the `/tmp` directory.  
 11. **10-back** ==> Contains a script that changes the working directory to the previous one.
-
+12. **11-lists** ==> Contains a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.  
+&emsp**Things to learn**
+	* **Filtering of files** => ls -la | grep "^-"
+	* **folow list format** ==> ls -`f`la or ls -la . .. /boot
+13. **
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
