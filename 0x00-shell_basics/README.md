@@ -101,30 +101,30 @@ When you run the command rm `*\~`, the shell expands the `*\~` pattern to match 
 The `-p` option allows you to create parent directories as needed, meaning that if the parent directories of a specified directory do not exist, they will be created as well.  
 Incase there is need to ovewrite the existent files, we can consider using the `-f` option.  
 19. **103-commas** ==> The `ls` command is used to list the contents of a directory in a Linux/Unix system. By default, running the command ls will display the names of the files and directories in the current directory.  
-		**Common options that can be used with the ls command**
-		* `-a`: Shows hidden files (files that start with a dot).
-		* `-A`: Shows all files except . and ...
-		* `-C`: Forces multi-column output, sorted vertically.
-		* `-d`: Shows only directories themselves, not their contents.
-		* `-F`: Appends a character to each file indicating its type (/ for directories, @ for symbolic links, | for FIFOs, = for sockets, and nothing for regular files).
-		* `-h`: Makes file sizes "human-readable" (i.e. in a format like "5.2K" or "10M").
-		* `-i`: Prints the inode number of each file.
-		* `-l`: Shows files in long format, with details such as permissions, owner, group, size, and modification time.
-		* `-m`: Lists the file names separated by commas.
-		* `-n`: Shows numeric UIDs and GIDs instead of names.
-		* `-o`: Same as -l, but without group information.
-		* `-p`: Appends a forward slash (/) to directories.
-		* `-q`: Shows non-printable characters as ?.
-		* `-r`: Reverses the order of the sort.
-		* `-R`: Shows subdirectories recursively.
-		* `-s`: Shows file sizes in blocks (usually 1KB).
-		* `-t`: Sorts by modification time, newest first.
-		* `-u`: Sorts by access time, newest first.
-		* `-U`: Shows files in unsorted order.
-		* `-x`: Forces multi-column output, sorted horizontally.
-		* `--color=[auto|always|never]`: Enables or disables colorized output.
-		* `--full-time`: Shows modification times in full ISO format.
-		* `--group-directories-first`: Puts directories before other files in the listing.
+**Common options that can be used with the ls command**
+	* `-a`: Shows hidden files (files that start with a dot).
+	* `-A`: Shows all files except . and ...
+	* `-C`: Forces multi-column output, sorted vertically.
+	* `-d`: Shows only directories themselves, not their contents.
+	* `-F`: Appends a character to each file indicating its type (/ for directories, @ for symbolic links, | for FIFOs, = for sockets, and nothing for regular files).
+	* `-h`: Makes file sizes "human-readable" (i.e. in a format like "5.2K" or "10M").
+	* `-i`: Prints the inode number of each file.
+	* `-l`: Shows files in long format, with details such as permissions, owner, group, size, and modification time.
+	* `-m`: Lists the file names separated by commas.
+	* `-n`: Shows numeric UIDs and GIDs instead of names.
+	* `-o`: Same as -l, but without group information.
+	* `-p`: Appends a forward slash (/) to directories.
+	* `-q`: Shows non-printable characters as ?.
+	* `-r`: Reverses the order of the sort.
+	* `-R`: Shows subdirectories recursively.
+	* `-s`: Shows file sizes in blocks (usually 1KB).
+	* `-t`: Sorts by modification time, newest first.
+	* `-u`: Sorts by access time, newest first.
+	* `-U`: Shows files in unsorted order.
+	* `-x`: Forces multi-column output, sorted horizontally.
+	* `--color=[auto|always|never]`: Enables or disables colorized output.
+	* `--full-time`: Shows modification times in full ISO format.
+	* `--group-directories-first`: Puts directories before other files in the listing.
 
 
 
