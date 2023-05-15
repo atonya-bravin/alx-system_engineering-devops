@@ -38,5 +38,5 @@ This project is aimed at revealing more on;
 11. **10-back** ==> Contains a script that changes the working directory to the previous one.
 
 
-##Summary
+## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
