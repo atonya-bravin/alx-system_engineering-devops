@@ -7,13 +7,13 @@
 From around **0700hrs** to **0900hrs**, there was an a breakdown of our system. Our visitors were getting an **Error 500** when they tried to reach our systems. Earlier on, there had been some system maintenance. During this time, one of our APIs got some bug which saw the whole system going down because that particular API runs some big chunk of the system.
 
 ## Timeline(EAT)
-**0640hrs** => Last project changes commits and push.
-**0700hrs** => First case report.
-**0701hrs** => Oncall officer raises alarm to the team.
-**0720hrs** => Project debugging begins
-**0840hrs** => Problem found and solution implemented.
-**0900hrs** => Restart of servers.
-**0905hrs** => 100% traffic back online.
+**0640hrs** => Last project changes commits and push.  
+**0700hrs** => First case report.  
+**0701hrs** => Oncall officer raises alarm to the team.  
+**0720hrs** => Project debugging begins  
+**0840hrs** => Problem found and solution implemented.  
+**0900hrs** => Restart of servers.  
+**0905hrs** => 100% traffic back online.  
 
 ## Root Cause
 In our infrastracture there are mainly two important aspects that we left out. A test environment that we can push our projects to first then test before pushing to our production environtent and a pager that can raise instant alerts to our team whenever our monitoring tool notices some downtime with out site. What this has contributed to this problem is that, when the last changes (that contained bugs) on the project were commited and pushed at around **0640hrs**, the changes went straight to the production environment thus causing problems directly to the visitors who had access and those who did not. The bug was brought in by a file that was reffered bo by a wrong name in a file that is depended on by most functionings of our system.
