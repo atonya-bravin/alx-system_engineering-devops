@@ -37,10 +37,12 @@ This project is aimed at revealing more on;
 10. **9-firstdirdeletion** ==> Contains a script that deletes the directory `my_first_directory` that is in the `/tmp` directory.  
 11. **10-back** ==> Contains a script that changes the working directory to the previous one.
 12. **11-lists** ==> Contains a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.  
-**Things to learn**
+**Take Away(T.A)**
 	* **Filtering of files** => ls -la | grep "^-"
 	* **folow list format** ==> ls -`f`la or ls -la . .. /boot
-13. **
+13. **12-file_type** ==> contains a script that prints the type of the file named `iamafile`, which is in the `/tmp`.  
+**Take Away(T.A)**
+	* **file** ==> In Linux, the file command is a command-line utility that is used to determine the type of a file. It examines the contents of a file and tries to identify what kind of data it contains.
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
