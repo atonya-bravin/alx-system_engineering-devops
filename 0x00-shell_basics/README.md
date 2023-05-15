@@ -53,7 +53,7 @@ This project is aimed at revealing more on;
 		This will create a **symbolic link** called **link1** to the file **file1**. If you modify **file1**, the changes will be reflected in **link1**. However, if you modify **link1**, the changes will not affect **file1**.
 15. **14-copy_html** ==> Contians a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.  
 **Take Away(T.A)**
-	* **cp**In Linux, the cp command is used to copy files or directories from one location to another. The basic syntax for the cp command is as follows: `cp [OPTIONS] <SOURCE> <DESTINATION>`
+	* **cp** ==> In Linux, the cp command is used to copy files or directories from one location to another. The basic syntax for the cp command is as follows: `cp [OPTIONS] <SOURCE> <DESTINATION>`
 	**Examples**
 		* `cp file1 folder1/`
 		Copies a file named **file1** from the current directory to a directory called **folder1**  
@@ -66,6 +66,34 @@ This project is aimed at revealing more on;
 	* `-u` (update): copies only when the source file is newer than the destination file, or the destination file does not exist
 	* `-v` (verbose): prints the name of each file as it is copied
 	* `-n` (no-clobber): does not overwrite existing files, equivalent to -i -n
+16. **100-lets_move** ==> Contains a script that moves all files beginning with an uppercase letter to the directory **/tmp/u**
+**Take Away(T.A)**
+	* **mv** ==> In Linux, the mv command is used to move or rename files and directories. Here's the basic syntax of the mv command: `mv [options] source_file(s) destination`
+	**Example**
+		* **Move a file to a directory** ==> `mv file.txt /home/user/documents/`
+		* **Rename a file** ==> `mv oldname.txt newname.txt`
+		* **Move multiple files to a directory** ==> `mv file1.txt file2.txt /home/user/documents/`
+		* **Move a directory** ==> `mv directory1 /home/user/documents/`
+**Character Class** ==> In Linux and other Unix-like systems, a character class is a set of characters that can be used to match a single character in a pattern. Character classes are used in various commands and utilities that work with patterns, such as regular expressions and file globbing.  
+**Some of the main Character classes include;**
+* `[:alnum:]` - matches any alphanumeric character
+* `[:alpha:]` - matches any alphabetic character
+* `[:blank:]` - matches any horizontal whitespace character, including space and tab
+* `[:cntrl:]` - matches any control character
+* `[:digit:]` - matches any digit (0-9)
+* `[:graph:]` - matches any printable character except space
+* `[:lower:]` - matches any lowercase letter
+* `[:print:]` - matches any printable character, including space
+* `[:punct:]` - matches any punctuation character
+* `[:space:]` - matches any whitespace character, including space, tab, and newline
+* `[:upper:]` - matches any uppercase letter
+* `[:xdigit:]` - matches any hexadecimal digit (0-9, A-F, a-f)
+**Solution brokedown**
+`mv [[:upper:]]* /tmp/u`
+-> `mv`: This is the command for "move".
+-> `[[:upper:]]*`: This is a pattern that matches any file or directory name starting with an uppercase letter. The square brackets **[ ]** indicate a character class, and **[:upper:]** is a predefined character class that matches uppercase letters. The** * **matches zero or more of any character after the uppercase letter.
+`/tmp/u:` This is the destination directory where the files and directories matching the pattern will be moved to. In this case, the destination directory is `/tmp/u`.
+
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
