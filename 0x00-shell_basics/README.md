@@ -93,7 +93,9 @@ This project is aimed at revealing more on;
 -> `mv`: This is the command for "move".  
 -> `[[:upper:]]*`: This is a pattern that matches any file or directory name starting with an uppercase letter. The square brackets **[ ]** indicate a character class, and **[:upper:]** is a predefined character class that matches uppercase letters.  
 The * matches zero or more of any character after the uppercase letter.`/tmp/u:` This is the destination directory where the files and directories matching the pattern will be moved to. In this case, the destination directory is `/tmp/u`.
-
+17. **101-clean_emacs** ==> Contains a script that deletes all files in the current working directory that end with the character ~
+**Solution brokedown**  
+When you run the command rm `*\~`, the shell expands the `*\~` pattern to match all files in the current directory that end with a tilde (~) character. The resulting list of filenames is passed to the rm command, which then deletes each file.
 
 ## Summary
 This project is aimed at creating ease of use of the linux system and also teach how to use the bash scripts.
