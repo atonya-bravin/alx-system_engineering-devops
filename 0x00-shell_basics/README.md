@@ -57,7 +57,7 @@ This project is aimed at revealing more on;
 	**Examples**
 		* `cp file1 folder1/`
 		Copies a file named **file1** from the current directory to a directory called **folder1**  
-	**Commonly used options**
+**Commonly used options**
 	* `-i` (interactive) ==> prompts before overwriting existing files
 	* `-r` (recursive): copies directories and their contents recursively
 	* `-p` (preserve): preserves file attributes such as permissions, timestamps, and ownership
