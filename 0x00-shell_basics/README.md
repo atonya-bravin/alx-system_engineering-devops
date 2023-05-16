@@ -129,7 +129,7 @@ Incase there is need to ovewrite the existent files, we can consider using the `
 **Solution breakdown**  
 `0 string SCHOOL School data`  
 `!:mime School`   
-We start by defining the offset, then declare the type we want to supply and the character set to look for **School**. We then provide the description that will be displayed when we trie to see all the files in the directory.  
+We start by defining the offset, then declare the type we want to supply **string** and the character set to look for **SCHOOL**. We then provide the description that will be displayed when we trie to see all the files in the directory.  
 `!:mime School` ==> The exclamation mark (!) indicates that this is a "magic" file header, and the ":mime" keyword specifies the MIME type associated with the file type. `School` defines the mime type of the document
 
 
