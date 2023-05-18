@@ -5,6 +5,6 @@ exec{ 'change_limit':
   path    => ['/bin','/usr/bin']
 }
 exec{ 'restart_nginx':
-  command => sudo service nginx restart,
-  path    => ['/bin','/usr/bin']
+  command => 'service nginx restart',
+  path    => ['/sbin','/usr/sbin']
 }
