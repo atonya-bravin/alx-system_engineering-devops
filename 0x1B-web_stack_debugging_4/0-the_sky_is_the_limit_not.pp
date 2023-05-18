@@ -1,10 +1,10 @@
 # change the ULIMIT of the nginx server
-$file_pth = '/etc/default/nginx'
-exec{ 'change_limit':
-  command => "sed -i 's/15/4096/g' ${file_pth}",
-  path    => ['/bin','/usr/bin']
+$file_path = '/etc/default/nginx'
+exec { 'change_limit':
+  command => "/bin/sed -i ${file_path} -e 's/15/4096/'"
 }
-exec{ 'restart_nginx':
-  command => 'service nginx restart',
-  path    => ['/sbin','/usr/sbin']
+
+exec { 'restart nginx':
+  command => '/usr/sbin/service nginx restart',
+  require => Exec['change_limit']
 }
