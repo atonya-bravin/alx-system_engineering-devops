@@ -8,7 +8,6 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    
     emp_id = argv[1]
 
     API_domain = "jsonplaceholder.typicode.com"
